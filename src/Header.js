@@ -15,7 +15,7 @@ const Header = () => {
       {/* tinder logo */}
       <img
         className="header__logo"
-        src="https://cdn1.iconfinder.com/data/icons/social-media-circle-long-shadow/1024/tinder-long-128.png"
+        src="https://boostmatches.com/wp-content/uploads/2020/06/Tinder-New-Company-Logo-Flame.png"
         alt="tinder-logo"
       />
 
