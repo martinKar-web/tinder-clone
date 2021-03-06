@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import TinderCards from './TinderCards';
-import SwipeButtons from './SwipeButtons'
+import SwipeButtons from './SwipeButtons';
+import Chats from './Chats';
+import ChatScreen from './ChatScreen'
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,16 +15,22 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <Header />
       <Router>
         <Switch>
+          {/* wild card route - any value can go after the colon */}
+          <Route path="/chat/:person">
+            <Header backButton="/chat" />
+             <ChatScreen />
+          </Route>
           <Route path="/chat">
-            <h1>I am a chatpage</h1>
+            <Header backButton="/" />
+            <Chats />
           </Route>
           {/* you always want to have your default route at the bottom */}
           <Route path="/">
+            <Header />
             <TinderCards />
-            <SwipeButtons/>
+            <SwipeButtons />
           </Route>
         </Switch>
       </Router>
